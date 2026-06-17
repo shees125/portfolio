@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Shees Ali — Social Media Manager & Content Creator</title>
+<title>Shees Ali — Content Writer & Social Media Manager</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 <style>
@@ -24,38 +24,43 @@
     display: flex; justify-content: space-between; align-items: center;
     padding: 1rem 3rem;
   }
-  .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; letter-spacing: 0.02em; color: var(--ink); text-decoration: none; }
-  nav ul { list-style: none; display: flex; gap: 2rem; }
-  nav ul a { text-decoration: none; color: var(--muted); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
+  .logo { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 600; color: var(--ink); text-decoration: none; }
+  nav ul { list-style: none; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  nav ul a { text-decoration: none; color: var(--muted); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; transition: color 0.2s; }
   nav ul a:hover { color: var(--ink); }
   section { padding: 5rem 3rem; max-width: 900px; margin: 0 auto; }
   #hero { min-height: 88vh; display: flex; flex-direction: column; justify-content: center; padding-top: 4rem; border-bottom: 1px solid var(--light-border); }
   .hero-tag { display: inline-block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 1.5rem; }
   .hero-tag::before { content: '— '; }
-  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 500; line-height: 1.05; color: var(--ink); margin-bottom: 1.5rem; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 500; line-height: 1.05; color: var(--ink); margin-bottom: 1.5rem; }
   h1 em { font-style: italic; color: var(--accent); }
-  .hero-sub { font-size: 1rem; color: var(--muted); max-width: 500px; line-height: 1.8; margin-bottom: 1.5rem; }
+  .hero-sub { font-size: 1rem; color: var(--muted); max-width: 520px; line-height: 1.8; margin-bottom: 1.5rem; }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem; }
+  .hero-badge { font-size: 11px; background: var(--tag-bg); color: var(--muted); padding: 4px 12px; border-radius: 2px; border: 1px solid var(--light-border); letter-spacing: 0.03em; }
   .hero-contact { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; }
   .hero-contact a { font-size: 13px; color: var(--muted); text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
   .hero-contact a:hover { color: var(--accent); }
-  .hero-contact a i { font-size: 15px; }
   .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn { padding: 0.7rem 1.8rem; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; cursor: pointer; border-radius: 2px; transition: all 0.2s; text-decoration: none; }
   .btn-primary { background: var(--ink); color: var(--cream); border: 1.5px solid var(--ink); }
   .btn-primary:hover { background: #333; }
   .btn-outline { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
   .btn-outline:hover { background: var(--ink); color: var(--cream); }
-  #about { border-bottom: 1px solid var(--light-border); }
   .section-label { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); font-weight: 500; margin-bottom: 2rem; }
+  section h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 500; margin-bottom: 2.5rem; }
+  section { border-bottom: 1px solid var(--light-border); }
+  #contact { border-bottom: none; text-align: center; }
+
+  /* ABOUT */
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-  .about-left h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 500; line-height: 1.2; margin-bottom: 1.2rem; }
+  .about-left h2 { font-size: 2.4rem; margin-bottom: 0; }
   .about-right p { color: var(--muted); margin-bottom: 1rem; }
   .about-right p strong { color: var(--ink); font-weight: 500; }
   .stats { display: flex; gap: 2rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--light-border); flex-wrap: wrap; }
   .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 600; display: block; color: var(--ink); }
   .stat-label { font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
-  #skills { border-bottom: 1px solid var(--light-border); }
-  #skills h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 500; margin-bottom: 2.5rem; }
+
+  /* SKILLS */
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1px; border: 1px solid var(--light-border); background: var(--light-border); }
   .skill-card { background: var(--cream); padding: 1.8rem 1.5rem; transition: background 0.2s; }
   .skill-card:hover { background: #F5F2EC; }
@@ -64,8 +69,34 @@
   .skill-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
   .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.8rem; }
   .tag { font-size: 11px; background: var(--tag-bg); color: var(--muted); padding: 3px 10px; border-radius: 2px; letter-spacing: 0.03em; }
-  #experience { border-bottom: 1px solid var(--light-border); }
-  #experience h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 500; margin-bottom: 2.5rem; }
+
+  /* PROCESS */
+  .process-steps { display: flex; flex-direction: column; gap: 0; }
+  .process-step { display: grid; grid-template-columns: 60px 1fr; gap: 1.5rem; padding: 1.8rem 0; border-top: 1px solid var(--light-border); align-items: start; }
+  .process-step:last-child { border-bottom: 1px solid var(--light-border); }
+  .step-num { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 500; color: var(--accent); opacity: 0.5; line-height: 1; padding-top: 4px; }
+  .step-content h3 { font-size: 16px; font-weight: 500; margin-bottom: 6px; }
+  .step-content p { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 8px; }
+
+  /* BLOG TOPICS */
+  .topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; border: 1px solid var(--light-border); background: var(--light-border); margin-bottom: 2rem; }
+  .topic-card { background: var(--cream); padding: 1.5rem; transition: background 0.2s; }
+  .topic-card:hover { background: #F5F2EC; }
+  .topic-niche { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; font-weight: 500; }
+  .topic-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 0.5rem; line-height: 1.4; }
+  .topic-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .topic-meta { display: flex; gap: 12px; margin-top: 1rem; font-size: 11px; color: var(--muted); }
+  .topic-meta span { display: flex; align-items: center; gap: 4px; }
+
+  /* TOOLS */
+  .tools-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+  .tool-group h4 { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem; font-weight: 500; }
+  .tool-list { list-style: none; }
+  .tool-list li { font-size: 13px; color: var(--muted); padding: 4px 0; border-bottom: 1px solid var(--light-border); display: flex; align-items: center; gap: 8px; }
+  .tool-list li:last-child { border-bottom: none; }
+  .tool-list li i { font-size: 14px; color: var(--accent); }
+
+  /* EXPERIENCE */
   .timeline { display: flex; flex-direction: column; }
   .timeline-item { display: grid; grid-template-columns: 140px 1fr; gap: 2rem; padding: 2rem 0; border-top: 1px solid var(--light-border); }
   .timeline-item:last-child { border-bottom: 1px solid var(--light-border); }
@@ -75,18 +106,18 @@
   .t-list { list-style: none; padding: 0; }
   .t-list li { font-size: 13px; color: var(--muted); line-height: 1.7; padding: 3px 0 3px 16px; position: relative; }
   .t-list li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-size: 11px; top: 5px; }
-  #languages { border-bottom: 1px solid var(--light-border); }
-  #languages h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 500; margin-bottom: 2rem; }
+
+  /* LANGUAGES */
   .lang-grid { display: flex; gap: 1.5rem; flex-wrap: wrap; }
   .lang-pill { padding: 0.6rem 1.4rem; border: 1px solid var(--light-border); border-radius: 2px; font-size: 14px; }
   .lang-pill span { color: var(--muted); font-size: 12px; margin-left: 6px; }
-  #contact { text-align: center; }
+
+  /* CONTACT */
   #contact h2 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 500; margin-bottom: 1rem; }
-  #contact p { color: var(--muted); margin-bottom: 2rem; }
+  #contact p.sub { color: var(--muted); margin-bottom: 2rem; }
   .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-  .contact-link { display: flex; align-items: center; gap: 8px; padding: 0.7rem 1.5rem; border: 1px solid var(--light-border); border-radius: 2px; text-decoration: none; color: var(--ink); font-size: 13px; font-weight: 500; letter-spacing: 0.04em; transition: all 0.2s; }
+  .contact-link { display: flex; align-items: center; gap: 8px; padding: 0.7rem 1.5rem; border: 1px solid var(--light-border); border-radius: 2px; text-decoration: none; color: var(--ink); font-size: 13px; font-weight: 500; transition: all 0.2s; }
   .contact-link:hover { border-color: var(--ink); background: var(--ink); color: var(--cream); }
-  .contact-link i { font-size: 16px; }
   footer { text-align: center; padding: 2rem 3rem; border-top: 1px solid var(--light-border); font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
 </style>
 </head>
@@ -97,6 +128,8 @@
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#writing">Writing</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -104,18 +137,26 @@
 
 <!-- HERO -->
 <section id="hero">
-  <span class="hero-tag">Social Media Manager &amp; Content Creator</span>
-  <h1>Content that <em>connects.</em><br>Strategy that converts.</h1>
-  <p class="hero-sub">Results-driven Social Media Manager based in Karachi with 1 year of experience building brand presence, driving website traffic, and creating content that actually works.</p>
+  <span class="hero-tag">Content Writer & Social Media Manager</span>
+  <h1>Words that rank.<br><em>Content that converts.</em></h1>
+  <p class="hero-sub">SEO-focused Content Writer and Social Media Manager based in Karachi — crafting data-backed blogs, technical articles, and social strategies that drive real traffic and engagement.</p>
+  <div class="hero-badges">
+    <span class="hero-badge">SEO Blog Writing</span>
+    <span class="hero-badge">Technical Content</span>
+    <span class="hero-badge">Content Research</span>
+    <span class="hero-badge">Social Media Strategy</span>
+    <span class="hero-badge">WordPress Publishing</span>
+    <span class="hero-badge">Google Analytics</span>
+  </div>
   <div class="hero-contact">
     <a href="mailto:shees2054@gmail.com"><i class="ti ti-mail"></i> shees2054@gmail.com</a>
     <a href="tel:+923180276880"><i class="ti ti-phone"></i> +92 318 027 6880</a>
-    <a href="https://www.linkedin.com/in/shees-ali-3a5572342" target="_blank"><i class="ti ti-brand-linkedin"></i> linkedin.com/in/shees-ali</a>
+    <a href="https://www.linkedin.com/in/shees-ali-3a5572342" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
     <a href="#"><i class="ti ti-map-pin"></i> Karachi, Pakistan</a>
   </div>
   <div class="btn-group">
-    <a href="#contact" class="btn btn-primary">Let's work together</a>
-    <a href="#experience" class="btn btn-outline">View experience</a>
+    <a href="#contact" class="btn btn-primary">Hire me</a>
+    <a href="#writing" class="btn btn-outline">See my writing</a>
   </div>
 </section>
 
@@ -124,25 +165,17 @@
   <p class="section-label">About me</p>
   <div class="about-grid">
     <div class="about-left">
-      <h2>Turning ideas into digital impact.</h2>
+      <h2>Research. Write. Rank. Repeat.</h2>
     </div>
     <div class="about-right">
-      <p>I'm a <strong>Social Media Manager and Content Creator</strong> with hands-on experience developing strategies that grow brand awareness and drive real, measurable results.</p>
-      <p>I specialize in <strong>SEO-optimized blog writing, social media strategy, Google Analytics reporting</strong>, and multimedia content production — across platforms like Instagram, LinkedIn, TikTok, Facebook and more.</p>
-      <p>Currently based in Karachi, I'm open to freelance projects and full-time opportunities where content meets strategy.</p>
+      <p>I'm a <strong>Content Writer and Social Media Manager</strong> with hands-on experience producing SEO-optimized blog posts, technical articles, and social content that drives measurable results.</p>
+      <p>At Data Vault Pakistan, I write about <strong>data centers, cloud infrastructure, and enterprise technology</strong> — combining deep research with clear, reader-friendly prose that ranks on search engines.</p>
+      <p>I handle everything from <strong>keyword research and content planning</strong> to WordPress publishing, performance tracking via Google Analytics, and social distribution. I don't just write — I build content systems.</p>
       <div class="stats">
-        <div>
-          <span class="stat-num">1+</span>
-          <span class="stat-label">Year experience</span>
-        </div>
-        <div>
-          <span class="stat-num">5+</span>
-          <span class="stat-label">Platforms managed</span>
-        </div>
-        <div>
-          <span class="stat-num">2</span>
-          <span class="stat-label">Languages</span>
-        </div>
+        <div><span class="stat-num">1+</span><span class="stat-label">Year experience</span></div>
+        <div><span class="stat-num">5+</span><span class="stat-label">Platforms managed</span></div>
+        <div><span class="stat-num">B2B</span><span class="stat-label">Tech niche focus</span></div>
+        <div><span class="stat-num">2</span><span class="stat-label">Languages</span></div>
       </div>
     </div>
   </div>
@@ -151,39 +184,175 @@
 <!-- SKILLS -->
 <section id="skills">
   <p class="section-label">What I do</p>
-  <h2>Skills &amp; expertise</h2>
+  <h2>Skills & expertise</h2>
   <div class="skills-grid">
     <div class="skill-card">
-      <div class="skill-icon"><i class="ti ti-device-mobile"></i></div>
-      <h3>Social Media Management</h3>
-      <p>Strategy, scheduling, and community management across all major platforms.</p>
-      <div class="tags"><span class="tag">Facebook</span><span class="tag">Instagram</span><span class="tag">LinkedIn</span><span class="tag">TikTok</span><span class="tag">Twitter</span></div>
-    </div>
-    <div class="skill-card">
       <div class="skill-icon"><i class="ti ti-pencil"></i></div>
-      <h3>Content Creation</h3>
-      <p>Blog writing, copywriting, and multimedia content development for diverse audiences.</p>
-      <div class="tags"><span class="tag">Blog Writing</span><span class="tag">Copywriting</span><span class="tag">Technical Writing</span></div>
-    </div>
-    <div class="skill-card">
-      <div class="skill-icon"><i class="ti ti-chart-bar"></i></div>
-      <h3>Analytics &amp; Reporting</h3>
-      <p>Tracking KPIs, analyzing traffic, and turning data into actionable improvements.</p>
-      <div class="tags"><span class="tag">Google Analytics</span><span class="tag">Facebook Insights</span><span class="tag">CTR Tracking</span></div>
+      <h3>SEO Blog Writing</h3>
+      <p>Long-form articles optimized for search — structured, well-researched, and written to rank and convert.</p>
+      <div class="tags"><span class="tag">Long-form</span><span class="tag">On-page SEO</span><span class="tag">Meta Optimization</span></div>
     </div>
     <div class="skill-card">
       <div class="skill-icon"><i class="ti ti-search"></i></div>
-      <h3>SEO Optimization</h3>
-      <p>Keyword research, meta optimization, and SEO audits to improve search rankings.</p>
-      <div class="tags"><span class="tag">On-Page SEO</span><span class="tag">SEO Audit</span><span class="tag">Keyword Research</span></div>
+      <h3>Content Research</h3>
+      <p>Thorough topic research using reliable sources, keyword tools, and competitor analysis to find content gaps.</p>
+      <div class="tags"><span class="tag">Keyword Research</span><span class="tag">SERP Analysis</span><span class="tag">Competitor Audit</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon"><i class="ti ti-cpu"></i></div>
+      <h3>Technical Writing</h3>
+      <p>Translating complex tech topics — data centers, cloud, networking — into clear, engaging content.</p>
+      <div class="tags"><span class="tag">Data Center</span><span class="tag">Cloud Infra</span><span class="tag">B2B Tech</span></div>
     </div>
     <div class="skill-card">
       <div class="skill-icon"><i class="ti ti-brand-wordpress"></i></div>
-      <h3>WordPress &amp; CMS</h3>
-      <p>Publishing, formatting, media management, and regular content maintenance.</p>
+      <h3>WordPress Publishing</h3>
+      <p>End-to-end publishing — formatting, media, readability, slug optimization, and regular content updates.</p>
       <div class="tags"><span class="tag">WordPress</span><span class="tag">CMS</span><span class="tag">Content Calendar</span></div>
     </div>
-   
+    <div class="skill-card">
+      <div class="skill-icon"><i class="ti ti-chart-bar"></i></div>
+      <h3>Analytics & Reporting</h3>
+      <p>Tracking post performance via Google Analytics — CTR, sessions, top pages, and refining strategy from data.</p>
+      <div class="tags"><span class="tag">Google Analytics</span><span class="tag">CTR Tracking</span><span class="tag">Performance Review</span></div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon"><i class="ti ti-device-mobile"></i></div>
+      <h3>Social Media Management</h3>
+      <p>Distributing content across platforms and managing brand presence with a strategy-first approach.</p>
+      <div class="tags"><span class="tag">Instagram</span><span class="tag">LinkedIn</span><span class="tag">Facebook</span><span class="tag">TikTok</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT RESEARCH PROCESS -->
+<section id="process">
+  <p class="section-label">How I work</p>
+  <h2>My content process</h2>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-content">
+        <h3>Topic discovery & keyword research</h3>
+        <p>I start by identifying content gaps using keyword research tools and SERP analysis. I look at search volume, competition level, and user intent to choose topics that have real ranking potential — not just traffic for the sake of it.</p>
+        <div class="tags"><span class="tag">Google Search Console</span><span class="tag">Keyword Planner</span><span class="tag">SERP Analysis</span></div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-content">
+        <h3>Deep research & source gathering</h3>
+        <p>Before writing a single word, I gather authoritative sources — industry reports, technical documentation, and expert insights. For B2B tech content, accuracy matters as much as readability, so I don't skip this step.</p>
+        <div class="tags"><span class="tag">Industry Reports</span><span class="tag">Technical Docs</span><span class="tag">Competitor Blogs</span></div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-content">
+        <h3>Outline & structure planning</h3>
+        <p>A well-structured outline is half the battle. I plan H2/H3 headings, key points per section, and internal linking opportunities before writing — so the draft flows logically and covers all relevant subtopics Google expects to see.</p>
+        <div class="tags"><span class="tag">Content Outline</span><span class="tag">Heading Hierarchy</span><span class="tag">Internal Linking</span></div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-content">
+        <h3>Writing & on-page SEO</h3>
+        <p>I write in a clear, direct style — no fluff. Each piece includes optimized meta titles, descriptions, SEO-friendly URLs, proper keyword placement, and readability checks to make sure both readers and search engines are happy.</p>
+        <div class="tags"><span class="tag">Meta Titles</span><span class="tag">SEO-friendly URLs</span><span class="tag">Keyword Density</span><span class="tag">Readability</span></div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">05</div>
+      <div class="step-content">
+        <h3>WordPress publishing & formatting</h3>
+        <p>I handle publishing directly in WordPress — formatting headings, adding featured images, optimizing media alt-text, setting categories and tags, and doing a final pre-publish check before going live.</p>
+        <div class="tags"><span class="tag">WordPress</span><span class="tag">Media Optimization</span><span class="tag">Alt Text</span></div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">06</div>
+      <div class="step-content">
+        <h3>Performance tracking & content updates</h3>
+        <p>After publishing, I monitor performance via Google Analytics and Search Console. I track impressions, CTR, and rankings — then update and improve content regularly to maintain and grow its position over time.</p>
+        <div class="tags"><span class="tag">Google Analytics</span><span class="tag">Search Console</span><span class="tag">Content Refresh</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WRITING AREAS / BLOG TOPICS -->
+<section id="writing">
+  <p class="section-label">Content areas</p>
+  <h2>What I write about</h2>
+  <div class="topics-grid">
+    <div class="topic-card">
+      <p class="topic-niche">Data Center</p>
+      <h3>Data Center Infrastructure & Colocation</h3>
+      <p>Tier classifications, power density, cooling solutions, colocation vs. on-premise, and modern facility design.</p>
+      <div class="topic-meta">
+        <span><i class="ti ti-file-text"></i> Technical</span>
+        <span><i class="ti ti-users"></i> B2B Audience</span>
+      </div>
+    </div>
+    <div class="topic-card">
+      <p class="topic-niche">Cloud & Networking</p>
+      <h3>Cloud Infrastructure & Enterprise IT</h3>
+      <p>Hybrid cloud, IaaS/PaaS comparisons, network architecture, and cloud migration best practices.</p>
+      <div class="topic-meta">
+        <span><i class="ti ti-file-text"></i> Technical</span>
+        <span><i class="ti ti-users"></i> IT Decision Makers</span>
+      </div>
+    </div>
+    <div class="topic-card">
+      <p class="topic-niche">Data Management</p>
+      <h3>Data Storage, Backup & Security</h3>
+      <p>Enterprise storage solutions, disaster recovery planning, data compliance, and cybersecurity essentials.</p>
+      <div class="topic-meta">
+        <span><i class="ti ti-file-text"></i> Educational</span>
+        <span><i class="ti ti-users"></i> Enterprise</span>
+      </div>
+    </div>
+    <div class="topic-card">
+      <p class="topic-niche">Social Media</p>
+      <h3>Platform Content & Brand Storytelling</h3>
+      <p>Captions, carousel content, LinkedIn articles, and short-form copy tailored for each platform's algorithm.</p>
+      <div class="topic-meta">
+        <span><i class="ti ti-file-text"></i> Copywriting</span>
+        <span><i class="ti ti-users"></i> B2B Brands</span>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label" style="margin-top: 3rem;">Tools I use</p>
+  <div class="tools-section">
+    <div class="tool-group">
+      <h4>Research & SEO</h4>
+      <ul class="tool-list">
+        <li><i class="ti ti-search"></i> Google Keyword Planner</li>
+        <li><i class="ti ti-chart-line"></i> Google Search Console</li>
+        <li><i class="ti ti-file-analytics"></i> Google Analytics</li>
+        <li><i class="ti ti-trending-up"></i> Ubersuggest / Ahrefs</li>
+      </ul>
+    </div>
+    <div class="tool-group">
+      <h4>Writing & Publishing</h4>
+      <ul class="tool-list">
+        <li><i class="ti ti-brand-wordpress"></i> WordPress</li>
+        <li><i class="ti ti-edit"></i> Google Docs</li>
+        <li><i class="ti ti-check"></i> Grammarly</li>
+        <li><i class="ti ti-align-left"></i> Hemingway Editor</li>
+      </ul>
+    </div>
+    <div class="tool-group">
+      <h4>Social & Design</h4>
+      <ul class="tool-list">
+        <li><i class="ti ti-brand-meta"></i> Meta Business Suite</li>
+        <li><i class="ti ti-calendar"></i> Buffer / Hootsuite</li>
+        <li><i class="ti ti-photo"></i> Canva</li>
+        <li><i class="ti ti-brand-linkedin"></i> LinkedIn Creator Tools</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -195,28 +364,28 @@
     <div class="timeline-item">
       <div class="t-date">2025 — Present<br><span style="color:var(--accent); font-style:italic;">1 Year</span></div>
       <div>
-        <p class="t-role">Social Media Manager &amp; Content Creator</p>
-        <p class="t-company">Data Vault Pakistan — Karachi, Pakistan</p>
+        <p class="t-role">Content Writer & SEO Blogger</p>
+        <p class="t-company">Data Vault Pakistan — Technical Blog Division</p>
         <ul class="t-list">
-          <li>Developed and executed comprehensive social media strategies across multiple platforms, increasing brand awareness and online engagement.</li>
-          <li>Created high-quality blog content optimized for SEO, resulting in improved website traffic and lead generation.</li>
-          <li>Monitored and analyzed website traffic using Google Analytics, tracking KPIs to measure campaign effectiveness.</li>
-          <li>Produced engaging multimedia content — graphics, captions, and posts — tailored for diverse audience segments.</li>
-          <li>Collaborated with the designer to produce eye-catching blog banners and images.</li>
+          <li>Researched and wrote long-form SEO blog posts on data center, cloud infrastructure, and enterprise IT topics — consistently producing accurate, well-structured content for a B2B audience.</li>
+          <li>Conducted keyword research and implemented on-page SEO best practices including meta titles, descriptions, SEO-friendly URLs, heading hierarchy, and internal linking.</li>
+          <li>Managed end-to-end WordPress publishing — formatting, media insertion, alt-text, categories, and readability optimization.</li>
+          <li>Planned and maintained a content calendar aligned with company goals, trending search topics, and product announcements.</li>
+          <li>Monitored blog performance via Google Analytics — tracked CTR, impressions, visitor behavior, and top-performing content to refine the content strategy.</li>
+          <li>Collaborated with the design team to brief and review blog banners, featured images, and visual assets that match each article's topic.</li>
         </ul>
       </div>
     </div>
     <div class="timeline-item">
       <div class="t-date">2025 — Present</div>
       <div>
-        <p class="t-role">Content Writer</p>
-        <p class="t-company">Data Vault Pakistan — Technical Blog Division</p>
+        <p class="t-role">Social Media Manager</p>
+        <p class="t-company">Data Vault Pakistan — Karachi, Pakistan</p>
         <ul class="t-list">
-          <li>Wrote technical blog posts on Data Center, cloud infrastructure, and data topics with a consistent tone and high accuracy.</li>
-          <li>Managed WordPress publishing — formatting, media, readability optimization, and regular updates.</li>
-          <li>Conducted keyword research and implemented on-page SEO best practices including meta titles, descriptions, and SEO-friendly URLs.</li>
-          <li>Monitored blog performance via Google Analytics — tracked CTR, visitor behavior, and top-performing content to refine strategy.</li>
-          <li>Planned and maintained a content calendar aligned with company goals and trending topics.</li>
+          <li>Developed and executed social media strategies across LinkedIn, Instagram, Facebook, and Twitter to grow brand visibility in the B2B tech space.</li>
+          <li>Repurposed blog content into platform-native social posts — carousels, short captions, and LinkedIn articles — extending the reach of each piece of content.</li>
+          <li>Produced multimedia content including graphics, captions, and promotional posts tailored to each platform's audience and algorithm.</li>
+          <li>Monitored engagement metrics and audience insights using Facebook Insights and LinkedIn Analytics to optimize posting schedules and content types.</li>
         </ul>
       </div>
     </div>
@@ -237,7 +406,7 @@
 <section id="contact">
   <p class="section-label">Get in touch</p>
   <h2>Let's create<br><em>something great.</em></h2>
-  <p>Open to freelance projects, collaborations, and full-time opportunities.</p>
+  <p class="sub">Open to freelance blog writing, content strategy, and full-time content roles.</p>
   <div class="contact-links">
     <a href="mailto:shees2054@gmail.com" class="contact-link"><i class="ti ti-mail"></i> shees2054@gmail.com</a>
     <a href="tel:+923180276880" class="contact-link"><i class="ti ti-phone"></i> +92 318 027 6880</a>
@@ -245,7 +414,7 @@
   </div>
 </section>
 
-<footer>© 2026 Shees Ali — Social Media Manager &amp; Content Creator, Karachi</footer>
+<footer>© 2026 Shees Ali — Content Writer & Social Media Manager, Karachi</footer>
 
 </body>
 </html>
